@@ -1,13 +1,13 @@
 # udptunnel
 
-A lightweight TCP over UDP tunneling implementation.
+Capas de  implementar conexiones tipo tcp sobre un tunel udp
 
 ### Compiling
 ------
 
 ##### Linux
 
-In source code directory, run:
+Entra al direcciorio y ejecuta
 
 ```
     make
@@ -15,7 +15,19 @@ In source code directory, run:
 
 ##### Windows
 
-Open Visual Studio "Native Tools Command Prompt", go to source code directory,
+Entra el directorio y ejecuta o abre el archivo de visual estudio 
+
+0.0.0.0:1922 -> Puerto del Enlace Local  ssh -p 1922 roo@localhost  Esto se redireccion al puerto 22
+
+192.168.1.6:6688 -> Tunnel Servidor y Puerto
+
+127.0.0.1:22 -> Apuntar al puerto de Servidor remoto
+
+
+```
+    udptunnel -c 0.0.0.0:1922 -t 192.168.1.6:6688 -r 127.0.0.1:22
+```
+
 run:
 
 ```
@@ -25,7 +37,7 @@ run:
 ### Running
 ------
 
-The udptunnel program can run in server mode or in client mode. The command line
+Aqui se explica como condifigurar los puertos
 syntax is:
 
 ```
